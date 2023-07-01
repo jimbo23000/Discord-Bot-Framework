@@ -1,12 +1,16 @@
-const { Client, Collection, Events, GatewayIntentBits, ChatInputCommandInteraction } = require('discord.js');
+// Interfaces with the discord.js API
+const { Client, Collection, GatewayIntentBits } = require('discord.js');
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
+// Do not upload the .env discord. Stores valuable data in a secure format
 require("dotenv").config();
-client.login(process.env.TOKEN);
 
+// Apart of the command handler. Uses a set (command name, command)
 client.commands = new Collection();
-// Command cooldown implementation. Uses a set (username, timestamp).
+// Command cooldown implementation. Uses a set (username, timestamp)
 client.cooldowns = new Collection();
+
+// Command and event handlers
 
 const fs = require('node:fs');
 const path = require('node:path');
@@ -41,6 +45,7 @@ for (const file of eventFiles) {
 	}
 }
 
+// Starter code to create the data files for the project
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize('database', 'user', 'password', {
 	host: 'localhost',
@@ -48,3 +53,6 @@ const sequelize = new Sequelize('database', 'user', 'password', {
 	logging: false,
 	storage: 'database.sqlite',
 });
+
+// Logs the bot onto the server
+client.login(process.env.TOKEN);
