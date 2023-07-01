@@ -4,10 +4,12 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 require("dotenv").config();
 client.login(process.env.TOKEN);
 
+client.commands = new Collection();
+// Command cooldown implementation. Uses a set (username, timestamp).
+client.cooldowns = new Collection();
+
 const fs = require('node:fs');
 const path = require('node:path');
-
-client.commands = new Collection();
 
 const foldersPath = path.join(__dirname, 'commands');
 const commandFolders = fs.readdirSync(foldersPath);
