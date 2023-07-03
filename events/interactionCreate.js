@@ -9,7 +9,8 @@ module.exports = {
 			console.error(`No command matching ${interaction.commandName} was found.`);
 			return;
 		}
-		// Command cooldown implementation.
+		
+		// Command cooldown implementation
 		const { cooldowns } = interaction.client;
 		if (!cooldowns.has(command.data.name)) {
 			cooldowns.set(command.data.name, new Collection());
@@ -27,6 +28,7 @@ module.exports = {
 		}
 		timestamps.set(interaction.user.id, now);
 		setTimeout(() => timestamps.delete(interaction.user.id), cooldownAmount);
+
 		try {
 			await command.execute(interaction);
 		} catch (error) {

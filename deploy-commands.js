@@ -24,6 +24,7 @@ for (const folder of commandFolders) {
 	}
 }
 
+// Used to run put requests from the API (newer versions of discord.js no longer support REST)
 const rest = new REST().setToken(process.env.TOKEN);
 
 (async () => {
