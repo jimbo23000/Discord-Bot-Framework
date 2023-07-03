@@ -9,4 +9,4 @@ First attempt at creating a discord bot and interfacing with multiple API's.
 - [ ] Start the simplification of UI; with features such as a command list
 
 ## Current Server List
-* [The Trenches](https://discord.gg/aq2X9ntd)
+* [The Herd](https://discord.gg/aq2X9ntd](https://discord.gg/3yUcaecsB)https://discord.gg/3yUcaecsB)
