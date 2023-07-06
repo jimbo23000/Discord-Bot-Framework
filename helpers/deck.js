@@ -21,3 +21,16 @@ function shuffle(deck) {
     }
     return deck;
 }
+
+function getShoe() {
+    let shoe = new Array();
+    for (let i = 0; i < 6; i++) {
+        shoe.push(getDeck());
+    }
+    shoe = shuffle(shoe);
+    return shoe;
+}
+
+module.exports = {
+    getShoe
+};

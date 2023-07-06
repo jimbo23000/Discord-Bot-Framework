@@ -1,6 +1,6 @@
 // Interfaces with the discord.js API
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages] });
 
 // Do not upload the .env discord. Stores valuable data in a secure format
 require("dotenv").config();
@@ -44,15 +44,6 @@ for (const file of eventFiles) {
 		client.on(event.name, (...args) => event.execute(...args));
 	}
 }
-
-// Starter code to create the data files for the project
-const Sequelize = require('sequelize');
-const sequelize = new Sequelize('database', 'user', 'password', {
-	host: 'localhost',
-	dialect: 'sqlite',
-	logging: false,
-	storage: 'database.sqlite',
-});
 
 // Logs the bot onto the server
 client.login(process.env.TOKEN);
