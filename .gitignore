@@ -1,4 +1,5 @@
 node_modules
 assets
-.env
 commands/games
+.env
+.DS_Store
