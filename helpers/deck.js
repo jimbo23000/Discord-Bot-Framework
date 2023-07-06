@@ -32,5 +32,5 @@ function getShoe() {
 }
 
 module.exports = {
-    getShoe
+    getDeck, shuffle, getShoe
 };
