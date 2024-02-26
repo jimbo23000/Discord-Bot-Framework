@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/jimbo23000/Discord-Bot-Framework/issues"
   },
-  "homepage": "https://github.com/jimbo23000/Discord-Bot-Framework#readme"
+  "homepage": "https://github.com/jimbo23000/Discord-Bot-Framework#readme",
+  "devDependencies": {
+    "eslint": "^8.57.0"
+  }
 }
