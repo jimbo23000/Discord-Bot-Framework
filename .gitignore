@@ -1,5 +1,3 @@
 node_modules
-assets
-commands/games
 .env
 .DS_Store
