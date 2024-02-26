@@ -1,3 +1,4 @@
+// Check out ESLint documentation for alternate rule sets
 {
 	"extends": "eslint:recommended",
 	"env": {
